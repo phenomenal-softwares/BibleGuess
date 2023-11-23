@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="modal.css"/>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>PICK-A-CARD</title>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"> 
+<script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+  <div id="startBtn" onclick="startGame()">
+    <button class="stButton font-effect-fire" type="submit">  START GAME</button>
+  </div>
+  <div id="gameTab">
+ <p id="highestScore">Highest score: <span id="bestScore"></span></p>
+  <p id="color"></p>
+  <div id="infoGame">
+  <p id="gNum">#<span id="gameNumber"></span></p>
+  <p id="grd"> Score: <span id="grade"></span></p>
+  <p id="resetBtn" onclick="reset()">RESET</p>
+  </div>
+  
+<div class="shuffleWrap">
+  <p id="remark"></p>
+</div>
+<div class="grid">
+  <img id="shuffleImg" src="shuffle.png" alt="shuffle" width="80%"/>
+  <div class="box blue" onclick="chooseColor('blue')"></div>
+  <div class="box green" onclick="chooseColor('green')"></div>
+  <div class="box yellow" onclick="chooseColor('yellow')"></div>
+  <div class="box red" onclick="chooseColor('red')"></div>
+ </div>
+ 
+ <div id="nextBtn" onclick="nextBtn()">
+  NEXT>>
+ </div>
+</div>
+
+<!-- The 2nd Modal for answers -->
+<div id="myModal2" class="modal2">
+  <!-- Modal content -->
+  <div class="modal-content2">
+    <div class="modal-header2">
+      Your score:
+    </div>
+<div class="modal-body2">
+ <p id="showScore"></p>
+    </div>
+    <div class="answerQuotes">
+    <i class="fa-solid fa-quote-right fa-bounce"></i>
+   <p id="quoteText">I'm proud of you!</p>
+    </div>
+    <div class="modal-footer2">
+     <button onclick="location.reload()" class="next-btn">RESTART GAME </button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
